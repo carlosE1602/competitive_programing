@@ -1,0 +1,36 @@
+1.000
+28.590
+3.415
+1.269
+1.000
+1.000
+1.000
+1.000
+1.542
+3.383
+6.281
+1.000
+1.000
+1.000
+1.000
+3.856
+1.000
+1.000
+4.051
+1.000
+
+
+calcula_minimais(s,n){
+    minimais = {}
+    for i = 1 to n-1 do:
+        eMinimal = true
+        for j = 1 to n-1 do:
+            if i != j:
+                if s[i].x > s[j].x && s[i].y > s[j].y:
+                    nMinimal <-- true
+                    break
+        if eMiminal == true:
+            //adiciona s[i] no conjunto de minimais
+            minimais = minimais + s[i]
+
+}
