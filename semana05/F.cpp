@@ -3,7 +3,6 @@
 using namespace std;
 vector<pair<int,int>> pecas;
 pair<int,int> inicio, fim;
-bool hasSolution = false;
 
 bool geraArranjo(pair<int,int> curr,bool c[], int n, int k, int curr_pos,int dir){
     if(k > n){return false;}
