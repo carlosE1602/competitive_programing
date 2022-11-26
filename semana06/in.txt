@@ -12,3 +12,64 @@
 -2 2
 1 2
 0 0
+
+
+mergeMinimais(B_minimais,C_minimais,n){
+    i = 0, j = 0;
+
+    minimais = {}
+
+    while i < n/2 and j < n/2 do:
+        //se um ponto em B domina um ponto em C, ele domina todos, pq todos em C, são minimais
+        if B_minimais[i].x <= C_minimais[i].x and B_minimais[i].y <= C_minimais[i].y
+            minimais U {B_minimais[i]}
+            i = i+1
+        //se esse ponto não domina um ponto em C, ele não domina nenhum, logo esse ponto de C domina todos de B  
+        else if C_minimais[i].x <= B_minimais[i].x and C_minimais[i].y <= B_minimais[i].y
+            minimais U {C_minimais[j]}
+            j = j+1
+        else
+            minimais U {B_minimais[i]}
+            minimais U {C_minimais[j]} 
+            i = i+1
+            j = j+1
+
+    //copia o restante dos pontos de j
+    if i == n/2
+        minimais U {C_minimais[j..[n/2]-1]}
+    if j == n/2
+        minimais U {C_minimais[i..[n/2]-1]}
+
+    return minimais
+
+}
+
+
+//retorna o vetor minimais com todos os minimais
+findMinimal(s,begin,end){
+    //caso base se só tem um elemento, ele é minimal
+    if end-begin+1 > 1:
+        
+
+        B_minimais = findMinimal(s,0,[n/2])      //procura os minimais de [0,n/2) intervalo aberto
+        C_minimais = findMinimal(s,[n/2],n)      //procura os minimais de [n/2,n) intervalo aberto
+
+        return mergeMinimais(B_minimais,C_minimais,n/2);    //concatena os minimais da primeira metade com os da segunda
+
+}
+
+
+
+//inicializa todas as posiçoes com 0
+repeticoes[1e10] = {0}
+
+calculaMaior(v,begin,end){
+    if end == begin:
+        repeticoes[begin] = repeticoes[begin] + 1
+        return v[begin]
+
+    meio = (end+begin)/2
+    A = calculaMaior(v,begin,meio) //intervalo fechado [begin,meio]
+    B = calculaMaior(v,meio+1,end) //intervalo fechado [meio+1,end]
+    return max(repeticoes[A],repeticoes[B])
+}

@@ -1,4 +1,23 @@
-8
-20
-42
-0
+
+
+//x é o vetor com n elementos
+SCSM(x,n):
+    F[n-1]
+    F[0] = 0
+
+    //relacao de recorrencia
+    for i = 0 until n-1 do:
+        F[i+1] = min(F[i], F[i]+x[i])
+
+    minimo = //menor valor de F, exceto o F[0]
+    idx = //indice de x com valor minimo
+
+    //conjunto dos elementos da menor subsequencia
+    contido = {x[idx]}
+
+    while F[idx] - x[idx] == F[idx-1]:
+        //adicona o x[idx] no conjunto dos contidos
+        contidos U {x[idx]}
+        idx--;
+
+    return contidos, minimo
