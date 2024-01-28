@@ -1,6 +1,6 @@
-# Competitive Programming - INF333
+# Competitive Programming 
 
-Welcome to the INF333 Competitive Programming repository! This repository is dedicated to the practice of problem-solving and algorithmic challenges commonly encountered in competitive programming, particularly geared towards honing your skills for marathons like those used in selective processes.
+Welcome to the Competitive Programming repository! This repository is dedicated to the practice of problem-solving and algorithmic challenges commonly encountered in competitive programming, particularly geared towards honing your skills for marathons like those used in selective processes.
 
 ## About INF333
 
