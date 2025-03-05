@@ -4,7 +4,7 @@ Welcome to the Competitive Programming repository! This repository is dedicated 
 
 ## About INF333
 
-INF333 is the course code associated with this repository, focusing on providing a structured approach to mastering the art of competitive programming. Whether you're a seasoned coder or just getting started, this collection of exercises is designed to enhance your problem-solving abilities and algorithmic thinking.
+INF333 is the course code associated with this repository, focusing on providing a structured approach to mastering the art of competitive programming.
 
 ## What to Expect
 
